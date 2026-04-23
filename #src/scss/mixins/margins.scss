@@ -1,0 +1,88 @@
+@mixin mt-40 {
+    margin-top: 4rem;
+    @include mt;
+    @media (max-width: $bp1) {
+        margin-top: 3.2rem;
+    }
+}
+@mixin mt-32 {
+    margin-top: 3.2rem;
+    @include mt;
+    @media (max-width: $bp1) {
+        margin-top: 2.4rem;
+    }
+}
+@mixin mt-24 {
+    margin-top: 2.4rem;
+    @include mt;
+}
+@mixin mt-20 {
+    margin-top: 2rem;
+    @include mt;
+}
+@mixin mt-16 {
+    margin-top: 1.6rem;
+    @include mt;
+}
+@mixin mt-8 {
+    margin-top: 0.8rem;
+    @include mt;
+}
+@mixin mb-120 {
+    margin-bottom: 12rem;
+    @include mb;
+    @media (max-width: $bp1) {
+        margin-bottom: 10rem;
+    }
+     @media (max-width: $bp3) {
+        margin-bottom: 8rem;
+    }
+}
+@mixin mb-40 {
+    margin-bottom: 4rem;
+    @include mb;
+    @media (max-width: $bp1) {
+        margin-bottom: 3.2rem;
+    }
+}
+@mixin mb-32 {
+    margin-bottom: 3.2rem;
+    @include mb;
+    @media (max-width: $bp1) {
+        margin-bottom: 2.4rem;
+    }
+}
+@mixin mb-24 {
+    margin-bottom: 2.4rem;
+    @include mb;
+    @media (max-width: $bp1) {
+        margin-bottom: 2rem;
+    }
+}
+@mixin mb-20 {
+    margin-bottom: 2rem;
+    @include mb;
+}
+@mixin mb-16 {
+    margin-bottom: 1.6rem;
+    @include mb;
+}
+@mixin mb-12 {
+    margin-bottom: 1.2rem;
+    @include mb;
+}
+@mixin mb-8 {
+    margin-bottom: 0.8rem;
+    @include mb;
+}
+
+@mixin mt {
+    &:first-child {
+        margin-top: 0;
+    }
+}
+@mixin mb {
+    &:not(section):last-child {
+        margin-bottom: 0;
+    }
+}

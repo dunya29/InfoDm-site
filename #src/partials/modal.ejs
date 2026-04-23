@@ -1,0 +1,92 @@
+<!--cookie-->
+<div class="cookie fixed-block" id="cookie-popup">
+    <div class="cookie__inner">
+        <div class="cookie__content">
+            <p>Наш сайт использует файлы cookie для улучшения работы, персонализации контента и проведения аналитики. Продолжая использовать сайт, вы соглашаетесь на
+                использование cookie в соответствии с нашей <a href="#" target="_blank">Политикой конфиденциальности</a>.</p>
+        </div>
+        <div class="cookie__btns">
+            <button class="btn main-btn cookie__accept"><span>Ок</span></button>
+        </div>
+    </div>
+</div>
+<!--modal-->
+<modal class="custom-scroll modal feedback-modal" id="feedback-modal">
+    <div class="modal__content">
+        <button type="button" class="btn-cross modal__close"></button>
+        <div class="custom-scroll">
+            <div class="modal__top">
+                <h2>Оставить заявку</h2>
+                <p>Оставьте ваши данные, и&nbsp;я&nbsp;свяжусь с&nbsp;Вами в&nbsp;течение 15&nbsp;минут</p>
+            </div>
+            <form class="form" novalidate onsubmit="event.preventDefault();Utils.FormUtils.formReset(this);Utils.ModalUtils.openSuccessMod()">
+                <div class="form__items">
+                    <div class="ui-control ui-input">
+                        <div class="ui-input__inp">
+                            <input type="text" placeholder=" " required>
+                            <div class="ui-input__placeholder">Ваше имя</div>
+                            <button type="button" class="btn-cross ui-input__reset" aria-label="Очистить поле"></button>
+                        </div>
+                        <span data-error>Заполните поле</span>
+                    </div>
+                    <div class="ui-control ui-input">
+                        <div class="ui-input__inp">
+                            <input type="tel" placeholder=" " required>
+                            <div class="ui-input__placeholder">Телефон</div>
+                            <button type="button" class="btn-cross ui-input__reset" aria-label="Очистить поле"></button>
+                        </div>
+                        <span data-error>Заполните поле</span>
+                    </div>
+                    <div class="ui-input">
+                        <textarea placeholder="Ваш комментарий"
+                            oninput="this.style.height = '';this.style.height = this.scrollHeight + 'px'"></textarea>
+                    </div>
+                </div>
+                <div class="form__footer">
+                    <div class="ui-control">
+                        <label class="ui-checkbox">
+                            <input type="checkbox" required>
+                            <span>Нажимая на кнопку, я принимаю условия <a href="#" target="_blank">Политики конфиденциальности</a></span>
+                        </label>
+                        <span data-error>Требуется согласие</span>
+                    </div>
+                    <button type="submit" class="btn main-btn" onclick="Utils.FormUtils.formValidate(event, this.closest('form'))">
+                        <span>Отправить</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</modal>
+<!--success-mod-->
+<modal class="custom-scroll modal success-modal" id="success-modal">
+    <div class="modal__content">
+        <button type="button" class="btn-cross modal__close"></button>
+        <div class="custom-scroll">
+            <div class="modal__top">
+                <div class="modal__icon"></div>
+                <h2></h2>
+                <p></p>
+            </div>
+            <button class="btn main-btn modal__close">
+                <span></span>
+            </button>
+        </div>
+    </div>
+</modal>
+<!--error-mod-->
+<modal class="custom-scroll modal error-modal" id="error-modal">
+    <div class="modal__content">
+        <button type="button" class="btn-cross modal__close"></button>
+        <div class="custom-scroll">
+            <div class="modal__top">
+                <div class="modal__icon"></div>
+                <h2></h2>
+                <p></p>
+            </div>
+            <button class="btn main-btn modal__close">
+                <span></span>
+            </button>
+        </div>
+    </div>
+</modal>

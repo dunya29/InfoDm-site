@@ -1,0 +1,85 @@
+.offer {
+    .sec-desc {
+        border-color: #c6c2dd;
+        @include mb-24;
+    }
+    &__inner {
+        padding: clamp(1.6rem, 2.09vw, 4rem);
+        min-height: min(90vh, 69.2rem);
+        @include br-16;
+        background: url(../img/offer-bg-mob.jpg) center/cover no-repeat;
+    }
+    &__top {
+        max-width: 65.1rem;
+        h2,
+        .h2 {
+            @include mb-16;
+        }
+    }
+    &__progress {
+        max-width: 51.8rem;
+        @include mt-40;
+        &-bar {
+            height: 1.2rem;
+            margin-bottom: 0.8rem;
+            position: relative;
+            overflow: hidden;
+            &:before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                border-radius: 0.8rem;
+                border: 1px solid rgba(var(--purple-rgb), 0.4);
+            }
+            span {
+                display: block;
+                width: 0%;
+                max-width: 100%;
+                height: 100%;
+                border-radius: 0.8rem;
+                background: linear-gradient(270.11deg, rgba(var(--lavender-rgb), 0.1) -23.39%, var(--purple) 53.79%);
+                transition: all 1s ease;
+                position: relative;
+                z-index: 1;
+            }
+        }
+        &-det {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            span {
+                @include fz-14;
+                color: var(--heather);
+            }
+        }
+    }
+    &__bottom {
+        display: grid;
+        gap: 3.2rem;
+    }
+    &__price {
+        p {
+            color: var(--heather);
+        }
+        .h3 {
+            display: block;
+            @include mb-12;
+        }
+    }
+    @media (min-width: $bp4) {
+        &__inner {
+            min-height: min(63vh, 60rem);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: url(../img/offer-bg.jpg) center/cover no-repeat;
+        }
+        &__progress {
+            @include mt-32;
+        }
+        &__bottom {
+            grid-template-columns: 1fr auto;
+        }
+    }
+}

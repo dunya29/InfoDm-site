@@ -1,0 +1,143 @@
+.ui-control {
+	&.error {
+		[data-error] {
+			display: block;
+		}
+		.ui-input__reset {
+			background-color: #ffeded;
+			&:before,
+			&:after {
+				background: var(--error-color);
+			}
+		}
+	}
+}
+.ui-input {
+	@include mb-12;
+	position: relative;
+	input,
+	textarea {
+		font: inherit;
+		line-height: 1;
+		border: 1px solid var(--lavender);
+		@include br-16;
+		background: var(--white);
+		transition: all 0.3s linear;
+		&::placeholder {
+			color: var(--heather);
+		}
+	}
+	input {
+		padding: 2.4rem 3.2rem 0.6rem 1.2rem;
+		&::placeholder {
+			visibility: hidden;
+		}
+		&:placeholder-shown + .ui-input__placeholder {
+			@include fz-18;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+	&__placeholder,
+	input:focus + .ui-input__placeholder {
+		@include fz-12;
+		color: var(--heather);
+		line-height: 1;
+		position: absolute;
+		top: 0.9rem;
+		left: 1.2rem;
+		transform: translateY(0);
+		transition: all 0.3s linear;
+		pointer-events: none;
+	}
+	textarea {
+		padding: 1.6rem 1.2rem;
+		min-height: 11rem;
+		resize: none;
+		overflow: hidden;
+	}
+	&__inp {
+		position: relative;
+	}
+	&__reset {
+		width: 3.2rem;
+		height: 3.2rem;
+		border-radius: 50%;
+		background: var(--purple-light);
+		position: absolute;
+		top: 50%;
+		right: 1.2rem;
+		transform: translateY(-50%);
+		visibility: hidden;
+		opacity: 0;
+		&:before,
+		&:after {
+			width: 1.6rem;
+			left: 0.8rem;
+		}
+		&.show {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+}
+.ui-checkbox {
+	cursor: pointer;
+	input {
+		display: none;
+		&:checked + span {
+			&:before {
+				background-color: var(--purple);
+				border-color: var(--purple);
+			}
+			&:after {
+				opacity: 1;
+			}
+		}
+	}
+	span {
+		min-height: 2rem;
+		display: block;
+		padding-left: 3.2rem;
+		position: relative;
+		&:before,
+		&:after {
+			content: "";
+			width: 2rem;
+			height: 2rem;
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			transition: all 0.3s linear;
+		}
+		&::before {
+			border: 1px solid var(--heather);
+			border-radius: 0.4rem;
+			left: 0;
+		}
+		&:after {
+			background: url(../img/svg/check.svg) center/1.6rem 1.6rem no-repeat;
+			opacity: 0;
+		}
+		a {
+			color: var(--black);
+			text-decoration: underline;
+		}
+	}
+}
+[data-error] {
+	@include fz-14;
+	display: none;
+	margin-top: 0.4rem;
+	color: var(--error-color);
+}
+.form {
+	&__footer {
+		@include mt-20;
+		.btn {
+			width: 100%;
+			@include mt-20;
+		}
+	}
+}

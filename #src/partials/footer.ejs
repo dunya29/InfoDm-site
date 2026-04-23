@@ -1,0 +1,34 @@
+<!--footer-->
+<footer class="footer <%= main ? 'footer--main' : '' %>">
+    <div class="container">
+        <div class="mb-40 footer__row">
+            <div class="footer__logo"><a href="#"><img src="img/svg/logo-white.svg" alt="Логотип InfoDM"></a></div>
+            <nav class="footer__nav">
+                <ul>
+                    <li><a class="js-anchor" href="#about">Решение</a></li>
+                    <li><a class="js-anchor" href="#for-whom">Для кого</a></li>
+                    <li><a class="js-anchor" href="#steps">Как это работает</a></li>
+                    <li><a class="js-anchor" href="#connect">Подключение</a></li>
+                    <li><a class="js-anchor" href="#results">Результаты</a></li>
+                </ul>
+            </nav>
+            <div class="footer__actions">
+                <div class="social-list">
+                    <ul>
+                        <li><a href="#" target="_blank"><svg><use xlink:href="img/svg/sprite.svg#telegram"></use></svg></a></li>
+                        <li><a href="#" target="_blank"><svg><use xlink:href="img/svg/sprite.svg#max"></use></svg></a></li>
+                    </ul>
+                </div>
+                <button class="btn light-btn mod-open-btn" data-modal="feedback-modal">
+                    <span>Оставить заявку</span>
+                </button>
+            </div>
+        </div>
+        <div class="footer__info">
+            <div class="footer__text">
+                <p>ИП&nbsp;Андреев Александр Владимирович<br>ИНН: 526097610780, ОГРНИП: 316527500080665</p>
+            </div>
+            <a href="#" target="_blank" class="footer__policy">Политика конфиденциальности</a>
+        </div>
+    </div>
+</footer>

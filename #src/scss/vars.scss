@@ -1,0 +1,66 @@
+:root {
+    --content-width: 148rem;
+    --container-offset: clamp(4rem, 3.125vw, 6rem);
+    --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+    --font-family: "Onest", sans-serif;
+    --black: #1c1546;
+    --black-rgb: 28, 21, 70;
+    --white: #faf9ff;
+    --white-rgb: 250, 249, 255;
+    --lux-white: #fafafa;
+    --lux-white-rgb: 250, 250, 250;
+    --flash-white: #f3f3f3;
+    --purple: #27187e;
+    --purple-rgb: 39, 24, 126;
+    --purple-hover: #1c1546;
+    --purple-active: #1c1546;
+    --purple-light: #dedaf8;
+    --purple-light-rgb: 222, 218, 248;
+    --grace: #a29bca;
+    --lavender: #cfc7ff;
+    --lavender-rgb: 207, 199, 255;
+    --gray-color: #e2e2e2;
+    --warm-beige: #b69889;
+    --heather: #787494;
+    --error-color: #f71d22;
+    --scrollbar-color: #faf9ff;
+    --scrollbar-thumb-color: #675caa;
+    --header-h: 10.1rem;
+    --main-offset: 3.2rem;
+    --scale: clamp(0.5rem, 1vw, 1rem);
+}
+
+$bp1: 1450.98px;
+$bp2: 1250.98px;
+$bp3: 1100.98px;
+$bp4: 767.98px;
+$bp5: 575.98px;
+$bp6: 479.98px;
+
+@media (min-width: 1920.98px) {
+    :root {
+        --content-width: 100%;
+        --container-offset: clamp(6rem, 0.04vw, 10rem);
+        --container-width: 100%;
+    }
+}
+@media (max-width: $bp1) {
+    :root {
+        --container-offset: clamp(1.6rem, 3.125vw, 4rem);
+    }
+}
+@media (max-width: $bp2) {
+    :root {
+        --header-h: 6.4rem;
+    }
+}
+@media (max-width: $bp3) {
+    :root {
+        --container-offset: 1.6rem;
+    }
+}
+@media (min-width: $bp5) and (max-width: $bp4) {
+    :root {
+        --container-offset: 4rem;
+    }
+}

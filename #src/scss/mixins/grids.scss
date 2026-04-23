@@ -1,0 +1,70 @@
+@mixin grid-5 {
+    @include grid;
+    grid-template-columns: repeat(5, 1fr);
+    @media (max-width: $bp3) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: $bp4) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: $bp5) {
+        grid-template-columns: 1fr;
+    }
+}
+@mixin grid-4 {
+    @include grid;
+    grid-template-columns: repeat(4, 1fr);
+    @media (max-width: $bp3) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: $bp4) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: $bp5) {
+        grid-template-columns: 1fr;
+    }
+}
+@mixin grid-3-5-4 {
+    @include grid;
+    grid-template-columns: 3fr 5fr 4fr;
+    @media (max-width: $bp2) {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 3.2rem;
+    }
+    @media (max-width: $bp4) {
+        grid-template-columns: 1fr;
+    }
+}
+@mixin grid-3-2 {
+    @include grid;
+    grid-template-columns: 3fr 2fr;
+     @media (max-width: $bp3) {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@mixin grid-3 {
+    @include grid;
+    grid-template-columns: repeat(3, 1fr);
+     @media (max-width: $bp4) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: $bp5) {
+        grid-template-columns: 1fr;
+    }
+}
+@mixin grid-2 {
+    @include grid;
+    grid-template-columns: 1fr 1fr;
+    @media (max-width: $bp4) {
+        grid-template-columns: 1fr;
+        gap: 2.4rem 1.2rem;
+    }
+}
+@mixin grid {
+    display: grid;
+    gap: 1.6rem;
+    align-items: start;
+    @media (max-width: $bp1) {
+        gap: 1.2rem;
+    }
+}

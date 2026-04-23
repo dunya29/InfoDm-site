@@ -1,0 +1,50 @@
+.author-review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    .media-cover {
+        width: 6.1rem;
+        height: 6.1rem;
+        border-radius: 50%;
+        border: 1px solid var(--lavender);
+        @include mb-16;
+    }
+}
+.author {
+    &__video {
+        max-width: 107.2rem;
+        margin: 0 auto;
+        .media-cover {
+            padding-top: 56.25%;
+            @include br-16;
+            img {
+                transition: all 0.3s linear;
+            }
+            video,
+            iframe {
+                visibility: hidden;
+                opacity: 0;
+                transition: all 0.3s linear;
+            }
+            &.is-playing {
+                img {
+                    visibility: hidden;
+                    opacity: 0;
+                }
+                video,
+                iframe {
+                    visibility: visible;
+                    opacity: 1;
+                }
+                .play-btn {
+                    background-image: url(../img/svg/pause.svg);
+                    opacity: 0;
+                }
+            }
+            &:hover .play-btn {
+                opacity: 1;
+            }
+        }
+    }
+}

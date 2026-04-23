@@ -1,0 +1,195 @@
+.cookie {
+    min-width: 0;
+    position: fixed;
+    bottom: var(--container-offset);
+    left: var(--container-offset);
+    transition:
+        visibility 0.3s linear,
+        opacity 0.3s linear,
+        bottom 0.3s linear;
+    z-index: 400;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 501;
+    &.show {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+    }
+    p {
+        @include fz-14;
+        a {
+            color: var(--black);
+            text-decoration: underline;
+        }
+    }
+    .btn {
+        @include fz-14;
+        span {
+            min-height: 4rem;
+            padding: 1.3rem 3rem;
+        }
+    }
+    &__inner {
+        width: 100%;
+        max-width: 394px;
+        color: var(--black);
+        padding: 16px;
+        border-radius: 12px;
+        background: var(--white);
+        box-shadow: 0 1.25rem 7.5rem 0 rgba(var(--lavender-rgb), 0.5);
+        margin-left: auto;
+    }
+    &__btns {
+        @include mt-20;
+    }
+    @media (max-width: $bp5) {
+        .btn {
+            width: auto;
+        }
+    }
+    @media (max-width: $bp6) {
+        right: var(--container-offset);
+        &__inner {
+            max-width: 100%;
+        }
+    }
+}
+.modal {
+    visibility: hidden;
+    opacity: 0;
+    padding: 3.2rem var(--container-offset);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(15, 2, 85, 0.302);
+    backdrop-filter: blur(16px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    overflow: auto;
+    transition: all 0.3s 0.1s ease-out;
+    &.open {
+        visibility: visible;
+        opacity: 1;
+        transition: all 0.3s ease-out;
+        .modal__content {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 0.3s 0.1s ease-out;
+        }
+    }
+    .btn-cross.modal__close {
+        width: 3rem;
+        height: 3rem;
+        position: absolute;
+        right: -3.5rem;
+        top: -3.5rem;
+        &::before,
+        &::after {
+            height: 0.3rem;
+            border-radius: 0.4rem;
+            background: var(--white);
+        }
+    }
+    &__top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        @include mb-32;
+        h2,
+        .h2 {
+            @include fz-45;
+            font-weight: 500;
+        }
+        p {
+            @include fz-24;
+            color: var(--heather);
+            max-width: 46rem;
+            @include mt-16;
+        }
+    }
+    &__content {
+        width: 100%;
+        max-width: 64.5rem;
+        padding: 3rem;
+        margin: auto;
+        background: var(--lux-white);
+        border: 1px solid var(--flash-white);
+        @include br-16;
+        position: relative;
+        opacity: 0;
+        transform: translateY(3rem);
+        transition: all 0.3s ease-out;
+    }
+    &__icon {
+        width: clamp(4.8rem, 3.33vw, 6.4rem);
+        height: clamp(4.8rem, 3.33vw, 6.4rem);
+        border-radius: 50%;
+        @include mb-32;
+    }
+    @media (max-width: $bp1) {
+        &__content {
+            max-width: 55.7rem;
+            padding: 2rem;
+        }
+    }
+    @media (max-width: $bp4) {
+        padding: 4rem 0 0;
+        overflow: hidden;
+        .btn-cross.modal__close {
+            right: 0.8rem;
+            top: -3.8rem;
+        }
+        &__content {
+            max-width: 100%;
+            max-height: 100%;
+            padding: 3rem calc(var(--container-offset) / 2) 0;
+            margin-bottom: 0;
+            border-radius: 1.6rem 1.6rem 0 0;
+            display: flex;
+            flex-direction: column;
+            .custom-scroll {
+                flex: 1 1 auto;
+                width: 100%;
+                max-width: calc(var(--content-width) + 20px);
+                padding: 0 calc(var(--container-offset) / 2) 3rem;
+                margin: 0 auto;
+                overflow: auto;
+                &::-webkit-scrollbar-thumb {
+                    border-radius: 0.6rem;
+                }
+            }
+        }
+    }
+    @media (max-width: $bp5) {
+        &__content .custom-scroll {
+            scrollbar-width: none;
+            &::-webkit-scrollbar {
+                display: none;
+                width: 0;
+                height: 0;
+            }
+        }
+    }
+}
+.success-modal,
+.error-modal {
+    .btn {
+        width: 100%;
+        span {
+            width: 100%;
+        }
+    }
+}
+.success-modal .modal__icon {
+    background: url(../img/svg/icon-success.svg) center / contain no-repeat;
+}
+.error-modal .modal__icon {
+    background: url(../img/svg/icon-error.svg) center / contain no-repeat;
+}

@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="image/x-icon" rel="shortcut icon" href="img/favicon/favicon.ico">
+    <link type="image/png" sizes="32x32" rel="icon" href="img/favicon/favicon-32x32.png">
+    <link type="image/png" sizes="192x192" rel="icon" href="img/favicon/android-icon-192x192.png">
+    <link type="image/svg+xml" sizes="any" rel="icon" href="img/favicon/favicon.svg">
+    <link sizes="120x120" rel="apple-touch-icon" href="img/favicon/apple-icon-120x120.png">
+    <link sizes="180x180" rel="apple-touch-icon" href="img/favicon/apple-icon-180x180.png">
+    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preload" href="fonts/Onest-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/style.min.css" type="text/css">
+    <title>Главная</title>
+</head>
+
+    <body>
+        <div class="wrap">
+             <!--header-->
+<header class="header fixed-block header--main">
+    <div class="container">
+        <div class="header__inner">
+            <div class="header__logo">
+                <a href="#">
+                    <picture>
+                        <source srcset="img/svg/logo-dark-mob.svg" type="image/svg+xml" media="(max-width: 767.98px)">
+                        <img src="img/svg/logo-dark.svg" alt="Логотип InfoDM">
+                    </picture>
+                </a>
+            </div>
+            <div class="header__mob">
+                <div class="custom-scroll header__mob-inner">
+                    <nav class="header__menu">
+                        <ul>
+                            <li><a class="js-anchor" href="#about">Решение</a></li>
+                            <li><a class="js-anchor" href="#steps">Как это работает</a></li>
+                            <li><a class="js-anchor" href="#results">Результаты</a></li>
+                            <li><a class="js-anchor" href="#for-whom">Для кого</a></li>
+                            <li><a class="js-anchor" href="#connect">Подключение</a></li>
+                        </ul>
+                    </nav>
+                    <button class="btn light-btn mod-open-btn" data-modal="feedback-modal">
+                        <span>Оставить заявку</span>
+                        <div class="link-icon">
+                            <svg><use xlink:href="img/svg/sprite.svg#link-icon"></use></svg>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="header__actions">
+                <div class="social-list">
+                    <ul>
+                        <li><a href="#" target="_blank"><svg><use xlink:href="img/svg/sprite.svg#telegram"></use></svg></a></li>
+                    </ul>
+                </div>
+                <button class="btn main-btn mod-open-btn" data-modal="feedback-modal"><span>Оставить заявку</span></button>
+                <div role="button" class="icon-menu" aria-label="Открыть меню">
+                    <div class="icon-menu__items">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+            <!--main-->
+            <main class="main">
+                <!--intro-->
+                <section class="intro">
+                    <div class="container">
+                        <div class="intro__row">
+                            <div class="intro__content">
+                                <h1>InfoDM&nbsp;— цифровой информационный центр для&nbsp;многоквартирных домов</h1>
+                                <button class="btn light-btn mod-open-btn" data-modal="feedback-modal">
+                                    <span>Оставить заявку</span>
+                                    <div class="link-icon">
+                                        <svg><use xlink:href="img/svg/sprite.svg#link-icon"></use></svg>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="intro__r">
+                                <div class="intro__images">
+                                    <!-- <div class="intro__img">
+                                        <picture><source srcset="img/content/intro.webp" type="image/webp"><img src="img/content/intro.jpg" alt></picture>
+                                    </div> -->
+                                    <div class="phone">
+                                        <img src="img/svg/phone.svg" class="phone__frame" />
+                                        <div class="phone__screen">
+                                            <picture><source srcset="img/phone-content.webp" type="image/webp"><img src="img/phone-content.png" class="phone__content" /></picture>
+                                        </div>
+                                    </div>
+                                    <div class="intro__icons" aria-hidden="true">
+                                        <div class="intro__icon">
+                                            <img src="img/svg/camera.svg" alt>
+                                        </div>
+                                        <div class="intro__icon">
+                                            <img src="img/svg/wifi.svg" alt>
+                                        </div>
+                                        <div class="intro__icon">
+                                            <img src="img/svg/play-sm.svg" alt>
+                                        </div>
+                                        <div class="intro__icon">
+                                            <img src="img/svg/tv.svg" alt>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="sec-group">
+                    <!--problems-->
+                    <section class="section problems">
+                        <div class="container">
+                            <div class="sec-top" data-animation="fadeUp">
+                                <div class="sec-desc">Проблемы</div>
+                                <h2><span>Проблемы</span>,которые знакомы каждому&nbsp;дому</h2>
+                            </div>
+                            <ul class="problems__items">
+                                <div class="item-problem" data-animation="bounceIn">
+                                    <h3 class="h4">Объявления не&nbsp;доходят до&nbsp;жильцов</h3>
+                                    <p>Бумажки срывают, чаты пролистывают, информация теряется</p>
+                                </div>
+                                <div class="item-problem" data-animation="bounceIn">
+                                    <h3 class="h4">Об отключениях узнают постфактум</h3>
+                                    <p>Нет&nbsp;воды или&nbsp;света&nbsp;— а&nbsp;жильцы не&nbsp;были предупреждены</p>
+                                </div>
+                                <div class="item-problem" data-animation="bounceIn">
+                                    <h3 class="h4">Лавина звонков и&nbsp;жалоб в&nbsp;УК</h3>
+                                    <p>Одни и&nbsp;те&nbsp;же&nbsp;вопросы снова и&nbsp;снова, потому что&nbsp;негде посмотреть актуальную информацию</p>
+                                </div>
+                                <div class="item-problem" data-animation="bounceIn">
+                                    <h3 class="h4">Недоверие к&nbsp;УК, даже&nbsp;если она&nbsp;работает хорошо</h3>
+                                    <p>Нет&nbsp;прозрачности → жильцы считают, что&nbsp;никто ничего не&nbsp;делает</p>
+                                </div>
+                                <div class="item-problem" data-animation="bounceIn">
+                                    <h3 class="h4">Камеры не дисциплинируют</h3>
+                                    <p>Видеонаблюдение есть, но&nbsp;его&nbsp;не&nbsp;замечают&nbsp;— мусорят, курят, портят общее имущество</p>
+                                </div>
+                            </ul>
+                        </div>
+                    </section>
+                    <!--about-->
+                    <section class="section about" id="about">
+                        <div class="container">
+                            <div class="sec-top" data-animation="fadeUp">
+                                <div class="sec-desc">Решение</div>
+                                <h2>Единая точка информации в&nbsp;доме&nbsp;— <span>большой экран</span><br><span>в&nbsp;лифтовом холле + веб-портал</span><br>
+                                    <span>для&nbsp;жильцов:</span></h2>
+                            </div>
+                            <div class="about__items">
+                                <div class="item-about" data-animation="fadeRight" style="--item-i: 0">
+                                    <div class="item-about__icon">
+                                        <img src="img/svg/icons/TV.svg" alt>
+                                    </div>
+                                    <p>Интерактивная панель в&nbsp;холле&nbsp;— яркий экран с&nbsp;объявлениями и&nbsp;live-трансляцией с&nbsp;камер. Невозможно
+                                        не&nbsp;заметить,
+                                        пока ждёшь лифт</p>
+                                </div>
+                                <div class="item-about" data-animation="fadeRight" style="--item-i: 1">
+                                    <div class="item-about__icon">
+                                        <img src="img/svg/icons/mobile.svg" alt>
+                                    </div>
+                                    <p>Мгновенная публикация через&nbsp;Telegram или&nbsp;MAX-бот&nbsp;— УК&nbsp;публикует объявление за&nbsp;30&nbsp;секунд,
+                                        без&nbsp;дизайнера,
+                                        принтера и&nbsp;похода по&nbsp;подъездам</p>
+                                </div>
+                                <div class="item-about" data-animation="fadeRight" style="--item-i: 2">
+                                    <div class="item-about__icon">
+                                        <img src="img/svg/icons/website.svg" alt>
+                                    </div>
+                                    <p>Сайт для&nbsp;жильцов&nbsp;— все&nbsp;объявления, важные контакты, форма заявки в&nbsp;УК. Работает с&nbsp;телефона,
+                                        без&nbsp;регистрации
+                                        и&nbsp;установки приложений</p>
+                                </div>
+                                <div class="item-about" data-animation="fadeRight" style="--item-i: 3">
+                                    <div class="item-about__icon">
+                                        <img src="img/svg/icons/request.svg" alt>
+                                    </div>
+                                    <p>Система заявок&nbsp;— жильцы отправляют обращения онлайн, УК&nbsp;получает уведомления в&nbsp;Telegram, берут в&nbsp;работу
+                                        и&nbsp;закрывают. Полная прозрачность. Возможна интеграция с&nbsp;системой учёта заявок</p>
+                                </div>
+                                <div class="item-about" data-animation="fadeRight" style="--item-i: 4">
+                                    <div class="item-about__icon">
+                                        <img src="img/svg/icons/live-stream.svg" alt>
+                                    </div>
+                                    <p>Live-стрим камер в&nbsp;браузере&nbsp;— трансляция практически без&nbsp;задержки. Гости видят, что&nbsp;места общего пользования
+                                        находятся
+                                        под&nbsp;наблюдением</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!--results-->
+                    <section class="section results" id="results">
+                        <div class="container">
+                            <div class="sec-top" data-animation="fadeUp">
+                                <div class="sec-desc">Результаты</div>
+                                <h2>Эффект после запуска</h2>
+                            </div>
+                            <div class="results__items">
+                                <div class="item-result" data-animation="scaleUp">
+                                    <div class="item-result__icon">
+                                        <img src="img/svg/icons/happyemoji.svg" alt>
+                                    </div>
+                                    <p>Жильцы и&nbsp;гости дома делают фото экрана, показывают 👍 в&nbsp;камеру, стоят с&nbsp;открытым ртом</p>
+                                </div>
+                                <div class="item-result" data-animation="scaleUp">
+                                    <div class="item-result__icon">
+                                        <img src="img/svg/icons/trend-down.svg" alt>
+                                    </div>
+                                    <p>Нарушения порядка резко снизились&nbsp;— экран с&nbsp;камерами слишком заметён</p>
+                                </div>
+                                <div class="item-result" data-animation="scaleUp">
+                                    <div class="item-result__icon">
+                                        <img src="img/svg/icons/clipboard-tick.svg" alt>
+                                    </div>
+                                    <p>УК&nbsp;оперативно размещает важные объявления</p>
+                                </div>
+                                <div class="item-result" data-animation="scaleUp">
+                                    <div class="item-result__icon">
+                                        <img src="img/svg/icons/info-circle.svg" alt>
+                                    </div>
+                                    <p>Поток повторяющихся вопросов сократился&nbsp;— вся&nbsp;инфо в&nbsp;одном месте</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!--for-whom-->
+                    <section class="section for-whom" id="for-whom" data-animation="fadeUp">
+                        <div class="container">
+                            <div class="sec-top">
+                                <div class="sec-desc">Для кого</div>
+                                <h2>Кому подойдёт</h2>
+                            </div>
+                            <ul class="sec-list">
+                                <li>ТСЖ&nbsp;и&nbsp;председатели домов</li>
+                                <li>Управляющие компании</li>
+                                <li>Застройщики</li>
+                                <li>Жилые комплексы комфорт и&nbsp;бизнес-класса</li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+                <div class="sec-group">
+                    <!--steps-->
+                    <section class="section steps" id="steps">
+                        <div class="container">
+                            <div class="sec-top" data-animation="fadeUp">
+                                <div class="sec-desc">Как это работает</div>
+                                <h2>Три простых шага к&nbsp;запуску</h2>
+                            </div>
+                            <ul class="steps__items">
+                                <div class="item-step" data-animation="fadeUp" style="--item-i: 0">
+                                    <div class="item-step__content">
+                                        <p class="h4">Обычный ТВ&nbsp;в&nbsp;холле + приставка на&nbsp;linux + интернет</p>
+                                    </div>
+                                    <div class="media-cover">
+                                        <picture><source srcset="img/content/step-1.webp" type="image/webp"><img src="img/content/step-1.png" alt></picture>
+                                    </div>
+                                </div>
+                                <div class="item-step" data-animation="fadeUp" style="--item-i: 1">
+                                    <div class="item-step__content">
+                                        <p class="h4">На&nbsp;экране открывается специальная страница InfoDM, управление объявлениями осуществляется
+                                            через&nbsp;Telegram/MAX</p>
+                                    </div>
+                                    <div class="media-cover">
+                                        <picture><source srcset="img/content/step-2.webp" type="image/webp"><img src="img/content/step-2.png" alt></picture>
+                                    </div>
+                                </div>
+                                <div class="item-step" data-animation="fadeUp" style="--item-i: 2">
+                                    <div class="item-step__content">
+                                        <p class="h4">Запуск за&nbsp;несколько дней, без&nbsp;капитальных затрат и&nbsp;сложной инфраструктуры</p>
+                                    </div>
+                                    <div class="media-cover">
+                                        <picture><source srcset="img/content/step-3.webp" type="image/webp"><img src="img/content/step-3.png" alt></picture>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    </section>
+                    <!--stack-->
+                    <section class="section stack" data-animation="fadeUp">
+                        <div class="container">
+                            <div class="sec-top">
+                                <div class="sec-desc">Стек</div>
+                                <h2>Что внутри</h2>
+                            </div>
+                            <ul class="sec-list">
+                                <li>Web-приложение</li>
+                                <li><img src="img/svg/telegram.svg" alt>Telegram/MAX Bot API</li>
+                                <li><img src="img/svg/WebRTC.svg" alt>RTSP→WebRTC streaming</li>
+                                <li>Приставка к ТВ на Linux</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <!--status-->
+                    <section class="section status" data-animation="fadeUp">
+                        <div class="container">
+                            <div class="sec-top">
+                                <div class="sec-desc sec-desc--status">Статус</div>
+                                <h2>InfoDM сегодня</h2>
+                                <p class="h4">Pet-проект автора, выросший из&nbsp;реальной эксплуатации в&nbsp;собственном доме.</p>
+                            </div>
+                            <div class="media-el">
+                                <picture><source srcset="img/content/laptop.webp" type="image/webp"><img src="img/content/laptop.png" alt></picture>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="sec-group">
+                    <section class="section author" data-animation="fadeUp">
+                        <div class="container">
+                            <div class="sec-top">
+                                <div class="sec-desc">От автора</div>
+                            </div>
+                            <figure class="mb-40 author-review">
+                                <div class="media-cover">
+                                    <picture><source srcset="img/author.webp" type="image/webp"><img src="img/author.jpg" alt></picture>
+                                </div>
+                                <blockquote>
+                                    <p>Я&nbsp;делал это&nbsp;для&nbsp;себя&nbsp;— жена была беременна, в&nbsp;лифте срали, а&nbsp;УК&nbsp;не&nbsp;успевала вешать объявления
+                                        об&nbsp;отключениях. Решение оказалось настолько рабочим, что&nbsp;жильцы аплодировали, УК&nbsp;благодарила, а&nbsp;я&nbsp;понял&nbsp;—
+                                        с&nbsp;этим сталкиваются тысячи домов. Теперь делюсь готовым продуктом»</p>
+
+                                </blockquote>
+                                <figcaption>
+                                    <cite>Александр Андреев</cite>
+                                </figcaption>
+                            </figure>
+                            <div class="author__video">
+                                <div class="video media-cover">
+                                    <picture><source srcset="img/content/video-poster.webp" type="image/webp"><img src="img/content/video-poster.jpg" alt></picture>
+                                    <!--<iframe src="https://vkvideo.ru/video_ext.php?oid=-226186353&id=456239020&hash=cf75091ba1901d54&hd=4" width="1920" height="1080" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>-->
+                                    <video loop playsinline>
+                                        <source data-src="media/crm.webm" type="video/webm">
+                                        <source data-src="media/crm.mp4" type="video/mp4">
+                                    </video>
+                                    <button class="play-btn" aria-label="Воспроизвести видео" aria-pressed="false"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!--connect-->
+                    <section class="section connect" id="connect">
+                        <div class="container">
+                            <div class="grid-2col connect__row">
+                                <div class="sec-top" data-animation="fadeUp">
+                                    <div class="sec-desc">Подключение</div>
+                                    <h2>Что входит в&nbsp;комплект&nbsp;поставки</h2>
+                                    <button class="btn main-btn mod-open-btn" data-modal="feedback-modal">
+                                        <span>Оставить заявку</span>
+                                        <div class="link-icon">
+                                            <svg><use xlink:href="img/svg/sprite.svg#link-icon"></use></svg>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div class="connect__content">
+                                    <ul class="mb-40 connect__list">
+                                        <li class="connect__item" data-animation="fadeUp" style="--item-i: 0">
+                                            <span class="connect__num">01</span>
+                                            <div class="connect__info">
+                                                <h3 class="h4">Linux-приставка</h3>
+                                                <p>Настроенное устройство для&nbsp;вывода информации на&nbsp;экран</p>
+                                            </div>
+                                        </li>
+                                        <li class="connect__item" data-animation="fadeUp" style="--item-i: 1">
+                                            <span class="connect__num">02</span>
+                                            <div class="connect__info">
+                                                <h3 class="h4">Подключение камер</h3>
+                                                <p>Трансляция с&nbsp;ваших камер на&nbsp;экран и&nbsp;в&nbsp;браузер (RTSP → WebRTC)</p>
+                                            </div>
+                                        </li>
+                                        <li class="connect__item" data-animation="fadeUp" style="--item-i: 2">
+                                            <span class="connect__num">03</span>
+                                            <div class="connect__info">
+                                                <h3 class="h4">Сайт для&nbsp;жильцов</h3>
+                                                <p>Объявления, контакты, заявки&nbsp;— всё&nbsp;с&nbsp;телефона, без&nbsp;приложений</p>
+                                            </div>
+                                        </li>
+                                        <li class="connect__item" data-animation="fadeUp" style="--item-i: 3">
+                                            <span class="connect__num">04</span>
+                                            <div class="connect__info">
+                                                <h3 class="h4">Бот&nbsp;для&nbsp;управления</h3>
+                                                <p>Публикация объявлений через&nbsp;Telegram/MAX за&nbsp;30&nbsp;секунд</p>
+                                            </div>
+                                        </li>
+                                        <li class="connect__item" data-animation="fadeUp" style="--item-i: 4">
+                                            <span class="connect__num">05</span>
+                                            <div class="connect__info">
+                                                <h3 class="h4">Интеграция с&nbsp;вашим ПО</h3>
+                                                <p>Подключение к&nbsp;существующей системе учёта заявок</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="connect__note">
+                                        <p>Монтаж ТВ, интернета и&nbsp;электрики&nbsp;— по&nbsp;договорённости.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!--offer-->
+                    <section class="section offer" data-animation="fadeUp">
+                        <div class="container">
+                            <div class="offer__inner">
+                                <div class="mb-40 offer__top">
+                                    <div class="sec-desc">🔥 Ограниченное предложениe</div>
+                                    <h2>Год использования сервиса БЕСПЛАТНО</h2>
+                                    <p class="h4">При покупке Linux приставки </p>
+                                    <div class="offer__progress">
+                                        <div class="offer__progress-bar">
+                                            <span style="width: 70%;"></span>
+                                        </div>
+                                        <div class="offer__progress-det">
+                                            <span>Осталось мест</span>
+                                            <span>7/10</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="offer__bottom">
+                                    <div class="offer__price">
+                                        <span class="h3">15 000 ₽ единоразово</span>
+                                        <p>1 приставка = 1 подъезд</p>
+                                    </div>
+                                    <button class="btn main-btn mod-open-btn" data-modal="feedback-modal">
+                                        <span>Оставить заявку</span>
+                                        <div class="link-icon">
+                                            <svg><use xlink:href="img/svg/sprite.svg#link-icon"></use></svg>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </main>
+            <!--footer-->
+<footer class="footer footer--main">
+    <div class="container">
+        <div class="mb-40 footer__row">
+            <div class="footer__logo"><a href="#"><img src="img/svg/logo-white.svg" alt="Логотип InfoDM"></a></div>
+            <nav class="footer__nav">
+                <ul>
+                    <li><a class="js-anchor" href="#about">Решение</a></li>
+                    <li><a class="js-anchor" href="#for-whom">Для кого</a></li>
+                    <li><a class="js-anchor" href="#steps">Как это работает</a></li>
+                    <li><a class="js-anchor" href="#connect">Подключение</a></li>
+                    <li><a class="js-anchor" href="#results">Результаты</a></li>
+                </ul>
+            </nav>
+            <div class="footer__actions">
+                <div class="social-list">
+                    <ul>
+                        <li><a href="#" target="_blank"><svg><use xlink:href="img/svg/sprite.svg#telegram"></use></svg></a></li>
+                        <li><a href="#" target="_blank"><svg><use xlink:href="img/svg/sprite.svg#max"></use></svg></a></li>
+                    </ul>
+                </div>
+                <button class="btn light-btn mod-open-btn" data-modal="feedback-modal">
+                    <span>Оставить заявку</span>
+                </button>
+            </div>
+        </div>
+        <div class="footer__info">
+            <div class="footer__text">
+                <p>ИП&nbsp;Андреев Александр Владимирович<br>ИНН: 526097610780, ОГРНИП: 316527500080665</p>
+            </div>
+            <a href="#" target="_blank" class="footer__policy">Политика конфиденциальности</a>
+        </div>
+    </div>
+</footer>
+            <!--cookie-->
+<div class="cookie fixed-block" id="cookie-popup">
+    <div class="cookie__inner">
+        <div class="cookie__content">
+            <p>Наш сайт использует файлы cookie для улучшения работы, персонализации контента и проведения аналитики. Продолжая использовать сайт, вы соглашаетесь на
+                использование cookie в соответствии с нашей <a href="#" target="_blank">Политикой конфиденциальности</a>.</p>
+        </div>
+        <div class="cookie__btns">
+            <button class="btn main-btn cookie__accept"><span>Ок</span></button>
+        </div>
+    </div>
+</div>
+<!--modal-->
+<modal class="custom-scroll modal feedback-modal" id="feedback-modal">
+    <div class="modal__content">
+        <button type="button" class="btn-cross modal__close"></button>
+        <div class="custom-scroll">
+            <div class="modal__top">
+                <h2>Оставить заявку</h2>
+                <p>Оставьте ваши данные, и&nbsp;я&nbsp;свяжусь с&nbsp;Вами в&nbsp;течение 15&nbsp;минут</p>
+            </div>
+            <form class="form" novalidate onsubmit="event.preventDefault();Utils.FormUtils.formReset(this);Utils.ModalUtils.openSuccessMod()">
+                <div class="form__items">
+                    <div class="ui-control ui-input">
+                        <div class="ui-input__inp">
+                            <input type="text" placeholder=" " required>
+                            <div class="ui-input__placeholder">Ваше имя</div>
+                            <button type="button" class="btn-cross ui-input__reset" aria-label="Очистить поле"></button>
+                        </div>
+                        <span data-error>Заполните поле</span>
+                    </div>
+                    <div class="ui-control ui-input">
+                        <div class="ui-input__inp">
+                            <input type="tel" placeholder=" " required>
+                            <div class="ui-input__placeholder">Телефон</div>
+                            <button type="button" class="btn-cross ui-input__reset" aria-label="Очистить поле"></button>
+                        </div>
+                        <span data-error>Заполните поле</span>
+                    </div>
+                    <div class="ui-input">
+                        <textarea placeholder="Ваш комментарий"
+                            oninput="this.style.height = '';this.style.height = this.scrollHeight + 'px'"></textarea>
+                    </div>
+                </div>
+                <div class="form__footer">
+                    <div class="ui-control">
+                        <label class="ui-checkbox">
+                            <input type="checkbox" required>
+                            <span>Нажимая на кнопку, я принимаю условия <a href="#" target="_blank">Политики конфиденциальности</a></span>
+                        </label>
+                        <span data-error>Требуется согласие</span>
+                    </div>
+                    <button type="submit" class="btn main-btn" onclick="Utils.FormUtils.formValidate(event, this.closest('form'))">
+                        <span>Отправить</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</modal>
+<!--success-mod-->
+<modal class="custom-scroll modal success-modal" id="success-modal">
+    <div class="modal__content">
+        <button type="button" class="btn-cross modal__close"></button>
+        <div class="custom-scroll">
+            <div class="modal__top">
+                <div class="modal__icon"></div>
+                <h2></h2>
+                <p></p>
+            </div>
+            <button class="btn main-btn modal__close">
+                <span></span>
+            </button>
+        </div>
+    </div>
+</modal>
+<!--error-mod-->
+<modal class="custom-scroll modal error-modal" id="error-modal">
+    <div class="modal__content">
+        <button type="button" class="btn-cross modal__close"></button>
+        <div class="custom-scroll">
+            <div class="modal__top">
+                <div class="modal__icon"></div>
+                <h2></h2>
+                <p></p>
+            </div>
+            <button class="btn main-btn modal__close">
+                <span></span>
+            </button>
+        </div>
+    </div>
+</modal>
+        </div>
+        <!--scripts-->
+<script src="js/libs/inputmask.min.js"></script>
+<script src="js/main.js"></script>
+        <script>
+            Utils.ModalUtils.openErrorMod('Что‑то пошло не&nbsp;так','Попробуйте отправить заявку ещё&nbsp;раз', 'отправить заявку')
+        </script>
+    </body>
+
+</html>

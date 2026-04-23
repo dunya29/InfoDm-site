@@ -1,0 +1,38 @@
+.connect {
+    &__item {
+        padding: 3.2rem 0;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 2.7rem;
+        align-items: start;
+        border-bottom: 2px solid var(--purple);
+        p {
+            color: var(--heather);
+        }
+        .h4 {
+            color: var(--purple);
+            @include mb-16;
+        }
+    }
+    &__num {
+        @include fz-45;
+        color: var(--purple);
+    }
+    &__info {
+        align-self: center;
+    }
+    &__note {
+        p {
+            @include fz-24;
+        }
+    }
+    @media (max-width: $bp1) {
+        &__item {
+            padding: 2rem 0;
+            gap: 1.6rem;
+            .h4 {
+                @include mb-8;
+            }
+        }
+    }
+}

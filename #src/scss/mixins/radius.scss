@@ -1,0 +1,24 @@
+@mixin br-50 {
+    border-radius: 5rem 5rem 0 0;
+    @media (max-width: $bp1) {
+        border-radius: 4rem 4rem 0 0;
+    }
+}
+@mixin br-30 {
+    border-radius: 3rem;
+}
+@mixin br-20 {
+    border-radius: 2rem;
+    @media (max-width: $bp1) {
+        border-radius: 1.2rem;
+    }
+}
+@mixin br-16 {
+    border-radius: 1.6rem;
+    @media (max-width: $bp1) {
+        border-radius: 1.2rem;
+    }
+}
+@mixin br-12 {
+    border-radius: 1.2rem;
+}

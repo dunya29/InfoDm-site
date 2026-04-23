@@ -1,0 +1,49 @@
+ <!--header-->
+<header class="header fixed-block <%= main ? 'header--main' : '' %>">
+    <div class="container">
+        <div class="header__inner">
+            <div class="header__logo">
+                <a href="#">
+                    <picture>
+                        <source srcset="img/svg/logo-dark-mob.svg" type="image/svg+xml" media="(max-width: 767.98px)">
+                        <img src="img/svg/logo-dark.svg" alt="Логотип InfoDM">
+                    </picture>
+                </a>
+            </div>
+            <div class="header__mob">
+                <div class="custom-scroll header__mob-inner">
+                    <nav class="header__menu">
+                        <ul>
+                            <li><a class="js-anchor" href="#about">Решение</a></li>
+                            <li><a class="js-anchor" href="#steps">Как это работает</a></li>
+                            <li><a class="js-anchor" href="#results">Результаты</a></li>
+                            <li><a class="js-anchor" href="#for-whom">Для кого</a></li>
+                            <li><a class="js-anchor" href="#connect">Подключение</a></li>
+                        </ul>
+                    </nav>
+                    <button class="btn light-btn mod-open-btn" data-modal="feedback-modal">
+                        <span>Оставить заявку</span>
+                        <div class="link-icon">
+                            <svg><use xlink:href="img/svg/sprite.svg#link-icon"></use></svg>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="header__actions">
+                <div class="social-list">
+                    <ul>
+                        <li><a href="#" target="_blank"><svg><use xlink:href="img/svg/sprite.svg#telegram"></use></svg></a></li>
+                    </ul>
+                </div>
+                <button class="btn main-btn mod-open-btn" data-modal="feedback-modal"><span>Оставить заявку</span></button>
+                <div role="button" class="icon-menu" aria-label="Открыть меню">
+                    <div class="icon-menu__items">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
