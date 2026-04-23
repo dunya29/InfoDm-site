@@ -12,7 +12,7 @@
         .header__logo {
             a {
                 padding: 0 0.8rem;
-                border-color:var(--flash-white);
+                border-color: var(--flash-white);
                 img,
                 svg {
                     transform: scale(0.85);
@@ -20,7 +20,6 @@
             }
         }
         .header__logo a,
-        .header__menu,
         .icon-menu,
         .social-list li a {
             background: rgba(var(--lux-white-rgb), 0.7);
@@ -39,7 +38,6 @@
         gap: 0 2rem;
     }
     &__logo a,
-    &__menu,
     .icon-menu,
     .social-list li a {
         backdrop-filter: blur(10px);
@@ -93,12 +91,19 @@
         }
     }
     @media (min-width: $bp2) {
+        &.scroll {
+            .header__menu {
+                background: rgba(var(--lux-white-rgb), 0.7);
+            }
+        }
         &__menu {
             width: max-content;
             padding: 0.7rem;
             @include br-16;
             background: rgba(var(--lux-white-rgb), 0.5);
             border: 1px solid var(--flash-white);
+            backdrop-filter: blur(10px);
+            transform: translate3d(0, 0, 0);
             ul {
                 display: flex;
                 flex-wrap: wrap;
@@ -135,6 +140,16 @@
                 width: 100%;
                 display: flex;
                 margin-top: auto;
+                span,
+                .link-icon {
+                    background: var(--purple-light);
+                }
+                &:hover,
+                &:active {
+                    span,.link-icon {
+                        background: var(--white);
+                    }
+                }
             }
             &-inner {
                 height: 100%;

@@ -626,11 +626,8 @@ cite {
 }
 
 .light-btn:hover span,
-.light-btn:active span {
-  background: var(--white);
-}
-
 .light-btn:hover .link-icon,
+.light-btn:active span,
 .light-btn:active .link-icon {
   background: var(--white);
 }
@@ -1431,7 +1428,6 @@ cite {
 }
 
 .header.scroll .header__logo a,
-.header.scroll .header__menu,
 .header.scroll .icon-menu,
 .header.scroll .social-list li a {
   background: rgba(var(--lux-white-rgb), 0.7);
@@ -1452,7 +1448,6 @@ cite {
 }
 
 .header__logo a,
-.header__menu,
 .header .icon-menu,
 .header .social-list li a {
   -webkit-backdrop-filter: blur(10px);
@@ -3093,6 +3088,10 @@ cite {
 }
 
 @media (min-width: 1250.98px) {
+  .header.scroll .header__menu {
+    background: rgba(var(--lux-white-rgb), 0.7);
+  }
+
   .header__menu {
     width: -webkit-max-content;
     width: -moz-max-content;
@@ -3101,6 +3100,10 @@ cite {
     border-radius: 1.6rem;
     background: rgba(var(--lux-white-rgb), 0.5);
     border: 1px solid var(--flash-white);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 
   .header__menu ul {
@@ -3366,6 +3369,18 @@ cite {
     display: -ms-flexbox;
     display: flex;
     margin-top: auto;
+  }
+
+  .header__mob .light-btn span,
+  .header__mob .light-btn .link-icon {
+    background: var(--purple-light);
+  }
+
+  .header__mob .light-btn:hover span,
+  .header__mob .light-btn:hover .link-icon,
+  .header__mob .light-btn:active span,
+  .header__mob .light-btn:active .link-icon {
+    background: var(--white);
   }
 
   .header__mob-inner {

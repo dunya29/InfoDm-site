@@ -297,9 +297,7 @@ cite {
 	}
 	&:hover,
 	&:active {
-		span {
-			background: var(--white);
-		}
+		span,
 		.link-icon {
 			background: var(--white);
 		}
@@ -422,7 +420,7 @@ cite {
 	}
 }
 .section {
-	@include mb-120
+	@include mb-120;
 }
 .sec-top {
 	display: flex;
