@@ -135,6 +135,20 @@
                 visibility: visible;
                 opacity: 1;
                 pointer-events: auto;
+                .header__menu ul li,
+                .light-btn {
+                    transform: translate3d(0, 0, 0);
+                    opacity: 1;
+                }
+            }
+            .header__menu ul li,
+            .light-btn {
+                transform: translate3d(0, 3rem, 0);
+                opacity: 0;
+                transition:
+                    all 0.3s linear,
+                    transform 0.5s calc(var(--item-i, 0) * 100ms) linear,
+                    opacity 0.5s calc(var(--item-i, 0) * 100ms) linear;
             }
             .light-btn {
                 width: 100%;
@@ -146,7 +160,8 @@
                 }
                 &:hover,
                 &:active {
-                    span,.link-icon {
+                    span,
+                    .link-icon {
                         background: var(--white);
                     }
                 }

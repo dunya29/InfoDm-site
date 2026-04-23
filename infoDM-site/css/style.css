@@ -3363,6 +3363,24 @@ cite {
     pointer-events: auto;
   }
 
+  .header__mob.open .header__menu ul li,
+  .header__mob.open .light-btn {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+
+  .header__mob .header__menu ul li,
+  .header__mob .light-btn {
+    -webkit-transform: translate3d(0, 3rem, 0);
+    transform: translate3d(0, 3rem, 0);
+    opacity: 0;
+    -webkit-transition: all 0.3s linear, opacity 0.5s calc(var(--item-i, 0) * 100ms) linear, -webkit-transform 0.5s calc(var(--item-i, 0) * 100ms) linear;
+    transition: all 0.3s linear, opacity 0.5s calc(var(--item-i, 0) * 100ms) linear, -webkit-transform 0.5s calc(var(--item-i, 0) * 100ms) linear;
+    transition: all 0.3s linear, transform 0.5s calc(var(--item-i, 0) * 100ms) linear, opacity 0.5s calc(var(--item-i, 0) * 100ms) linear;
+    transition: all 0.3s linear, transform 0.5s calc(var(--item-i, 0) * 100ms) linear, opacity 0.5s calc(var(--item-i, 0) * 100ms) linear, -webkit-transform 0.5s calc(var(--item-i, 0) * 100ms) linear;
+  }
+
   .header__mob .light-btn {
     width: 100%;
     display: -webkit-box;
